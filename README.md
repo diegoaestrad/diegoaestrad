@@ -2,7 +2,7 @@
 - 👀 I’m interested in software development
 - 🌱 I’m currently learning react
 - 💞️ I’m looking to collaborate on development solutions that allow me to grow in knowlegdge terms
-- 📫 How to reach me www.linkedin.com/in/computer-programmer
+- 📫 How to reach me www.linkedin.com/in/86daeb
 
 <!---
 diegoaestrad/diegoaestrad is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
