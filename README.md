@@ -1,40 +1,41 @@
 # 👋 Hi, I'm Diego Estrada
 
-🚀 **Software Engineer | Java Backend Developer | Cybersecurity Specialist (EC-Council CCT Certified)**  
-🇨🇦 Based in Canada | 💡 Passionate about building secure, scalable systems
+🚀 **Software Engineer | Java Backend Developer | Cybersecurity Specialist (CCT Certified)**  
+🇨🇦 Based in Canada | 💡 Building secure, scalable, real-world software
 
 ---
 
 ## 🧠 About me
 
-I'm a Systems Engineer with strong experience in **Java backend development**, **databases**, and **cybersecurity**.  
-I enjoy building real-world solutions where software meets infrastructure, automation, and AI.
-
-Currently focused on:
-- 🛡️ Building secure backend architectures (security-first mindset)
-- 🤖 Integrating AI into software products and automation workflows
-- 🧩 Designing clean backend systems with Spring Boot + JPA
+I'm a Systems Engineer with strong experience in **Java backend development**, **SQL**, and **cybersecurity**.  
+I enjoy building systems that are not only functional, but also **secure, clean, and scalable**.
 
 ---
 
-## 🏆 Certifications
+## 🎓 Education & Certifications
 
-- ✅ **Certified Cybersecurity Technician (CCT) – EC-Council** *(Completed Dec 31, 2025)*
+**Education**
+- 🇨🇴 **BSc. Systems Engineering** — Colombia  
+- 🇨🇴 **Specialization in Information Security** — Colombia  
+- 🇨🇦 **Computer Programmer** — Canada  
+
+**Certification**
+- ✅ **Certified Cybersecurity Technician (CCT) — EC-Council** *(Completed Dec 31, 2025)*
 
 ---
 
 ## 🔥 What I'm working on
 
 ### 📦 Inventory & Warehouse Systems
-- SQL-heavy systems with complex relationships
-- Assessments, specs, item receiving workflows, and status pipelines
+- SQL-heavy systems with complex relationships  
+- Specs assessment workflows, receiving processes, and status pipelines  
 
 ### 📞 Raspberry Pi Automation Project
 A Raspberry Pi system that:
 - Calls a predefined list of phone numbers  
 - Logs responses to a CSV  
 - Sends personalized SMS based on results  
-- Tracks answered calls for later follow-up
+- Tracks answered calls for later follow-up  
 
 ---
 
@@ -46,24 +47,24 @@ A Raspberry Pi system that:
 - SQL (complex queries & optimization)
 
 **Security**
-- Cybersecurity fundamentals
-- Network security, policies, controls
-- Secure software development mindset
+- Secure development mindset
+- Cybersecurity fundamentals & best practices
+- Security-focused architecture
 
 **Tools & Other**
 - Git / GitHub
 - Linux
-- Raspberry Pi projects
+- Raspberry Pi
 - AI integrations
 
 ---
 
-## 📌 What I’m looking for
+## 🤝 Collaboration
 
-🤝 I'm open to collaborating on:
+I'm open to collaborating on:
 - Java backend projects
 - API-driven systems
-- Inventory, automation, and productivity tools
+- Automation tools
 - Secure software solutions
 
 ---
@@ -75,4 +76,4 @@ A Raspberry Pi system that:
 
 ---
 
-⭐ If you're building something interesting and need a strong backend + security mindset, feel free to reach out!
+⭐ Always happy to connect with people building meaningful software.
