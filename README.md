@@ -39,4 +39,4 @@ Advanced security practices & system design
 ---
 
 ## 📫 Contact
-LinkedIn: (tu link)
+LinkedIn: https://www.linkedin.com/in/86daeb/
