@@ -2,6 +2,8 @@
 
 ### Backend Software Engineer | AI Integration Developer | Cybersecurity Specialist
 
+🌐 **Portfolio:** [diegoaestrad.github.io/diegoaestrad](https://diegoaestrad.github.io/diegoaestrad/)
+
 💻 Systems Engineer
 🎓 Specialist in Information Security
 🎓 Advanced Diploma in Computer Programming (Canada)
@@ -114,6 +116,9 @@ My current areas of focus include:
 
 💼 LinkedIn
 https://www.linkedin.com/in/86daeb/
+
+🌐 Portfolio
+https://diegoaestrad.github.io/diegoaestrad/
 
 ---
 

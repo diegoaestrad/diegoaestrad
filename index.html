@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Idioma antes del primer pintado: preferencia guardada → idioma del navegador → español */
+    (function () {
+      var l = "es";
+      try {
+        var s = localStorage.getItem("de-lang");
+        if (s === "es" || s === "en") { l = s; }
+        else if (!/^es\b/i.test(navigator.language || "es")) { l = "en"; }
+      } catch (e) {
+        if (!/^es\b/i.test(navigator.language || "es")) { l = "en"; }
+      }
+      document.documentElement.setAttribute("data-lang", l);
+      document.documentElement.lang = l;
+      document.documentElement.className += " js";
+    })();
+  </script>
+
+  <title>Diego Estrada · Backend Software Engineer (Java y Spring Boot)</title>
+  <meta name="description" content="Portafolio de Diego Alejandro Estrada Beltran, Backend Software Engineer con más de 15 años en Java, Spring Boot, APIs REST, ciberseguridad e integraciones de IA con MCP. Medellín, Colombia.">
+  <meta name="author" content="Diego Alejandro Estrada Beltran">
+  <meta name="theme-color" content="#0F0E0C">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://diegoaestrad.github.io/diegoaestrad/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Diego Estrada">
+  <meta property="og:title" content="Diego Estrada · Backend Software Engineer">
+  <meta property="og:description" content="Backends en Java que aguantan producción: seguros, escalables y listos para IA. 15+ años en software, calidad y ciberseguridad.">
+  <meta property="og:url" content="https://diegoaestrad.github.io/diegoaestrad/">
+  <meta property="og:image" content="https://diegoaestrad.github.io/diegoaestrad/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Diego Alejandro Estrada Beltran",
+    "jobTitle": "Backend Software Engineer",
+    "url": "https://diegoaestrad.github.io/diegoaestrad/",
+    "image": "https://diegoaestrad.github.io/diegoaestrad/assets/diego-estrada.jpg",
+    "email": "mailto:86diegoestrada@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressCountry": "CO" },
+    "sameAs": ["https://www.linkedin.com/in/86daeb/", "https://github.com/diegoaestrad"],
+    "knowsAbout": ["Java", "Spring Boot", "REST APIs", "Microservices", "Model Context Protocol", "Cybersecurity", "Test automation", "PostgreSQL", "MySQL", "Docker"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidad Piloto de Colombia" },
+      { "@type": "CollegeOrUniversity", "name": "Georgian College" }
+    ],
+    "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Certified Cybersecurity Technician (C|CT)", "recognizedBy": { "@type": "Organization", "name": "EC-Council" } }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main"><span data-l="es">Saltar al contenido</span><span data-l="en">Skip to content</span></a>
+
+  <!-- ───────────── Header ───────────── -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Diego Estrada">
+        <span class="brand-mark" aria-hidden="true">DE</span>
+        <span class="brand-text">
+          <span class="brand-name">Diego Estrada</span>
+          <span class="brand-place">Medellín, Colombia</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Principal" data-aria-es="Principal" data-aria-en="Main">
+        <a href="#perfil"><span data-l="es">Perfil</span><span data-l="en">Profile</span></a>
+        <a href="#proyectos"><span data-l="es">Proyectos</span><span data-l="en">Projects</span></a>
+        <a href="#experiencia"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
+        <a href="#habilidades"><span data-l="es">Habilidades</span><span data-l="en">Skills</span></a>
+        <a href="#credenciales"><span data-l="es">Credenciales</span><span data-l="en">Credentials</span></a>
+        <a href="#contacto"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
+      </nav>
+
+      <div class="header-tools">
+        <span class="status"><span class="status-dot" aria-hidden="true"></span><span data-l="es">Disponible</span><span data-l="en">Open to work</span></span>
+        <div class="lang-switch" role="group" aria-label="Idioma" data-aria-es="Idioma" data-aria-en="Language">
+          <button type="button" data-set-lang="es" aria-pressed="true" title="Español">ES</button>
+          <button type="button" data-set-lang="en" aria-pressed="false" title="English">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm header-cta" href="#contacto"><span data-l="es">Contactar</span><span data-l="en">Get in touch</span></a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menú" data-aria-es="Menú" data-aria-en="Menu">
+          <span class="menu-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Menú móvil" data-aria-es="Menú móvil" data-aria-en="Mobile menu">
+      <a href="#perfil"><span class="idx">01</span><span data-l="es">Perfil</span><span data-l="en">Profile</span></a>
+      <a href="#proyectos"><span class="idx">02</span><span data-l="es">Proyectos</span><span data-l="en">Projects</span></a>
+      <a href="#experiencia"><span class="idx">03</span><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
+      <a href="#habilidades"><span class="idx">04</span><span data-l="es">Habilidades</span><span data-l="en">Skills</span></a>
+      <a href="#credenciales"><span class="idx">05</span><span data-l="es">Credenciales</span><span data-l="en">Credentials</span></a>
+      <a href="#contacto"><span class="idx">06</span><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
+    </nav>
+    <p class="mobile-menu-status"><span class="status-dot" aria-hidden="true"></span><span data-l="es">Disponible para nuevos proyectos</span><span data-l="en">Open to new projects</span></p>
+  </div>
+
+  <main id="main">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero-grid">
+        <h1 class="hero-name" id="hero-name">
+          <span class="hero-line">Diego</span>
+          <span class="hero-line">Estrada</span>
+        </h1>
+
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <picture>
+              <source srcset="assets/diego-estrada.webp" type="image/webp">
+              <img src="assets/diego-estrada.jpg" width="840" height="1050" fetchpriority="high"
+                   alt="Retrato en blanco y negro de Diego Alejandro Estrada Beltran"
+                   data-alt-es="Retrato en blanco y negro de Diego Alejandro Estrada Beltran"
+                   data-alt-en="Black and white portrait of Diego Alejandro Estrada Beltran">
+            </picture>
+            <span class="rec" aria-hidden="true"><span class="rec-dot"></span>REC</span>
+            <span class="rec-year" aria-hidden="true">2026</span>
+            <span class="corner c-tl" aria-hidden="true"></span>
+            <span class="corner c-tr" aria-hidden="true"></span>
+            <span class="corner c-bl" aria-hidden="true"></span>
+            <span class="corner c-br" aria-hidden="true"></span>
+          </div>
+          <figcaption>Diego Alejandro Estrada Beltran</figcaption>
+        </figure>
+
+        <div class="hero-copy">
+          <p class="hero-role">Backend Software Engineer</p>
+          <p class="hero-meta">
+            <span>Java &amp; Spring Boot</span>
+            <span><span class="status-dot" aria-hidden="true"></span><span data-l="es">Disponible, remoto o híbrido</span><span data-l="en">Available, remote or hybrid</span></span>
+          </p>
+
+          <p class="hero-value" data-l="es">Construyo backends en Java que aguantan producción: seguros, escalables y listos para integrarse con IA.</p>
+          <p class="hero-value" data-l="en">I build Java backends that hold up in production: secure, scalable and ready to work with AI.</p>
+
+          <p class="hero-desc" data-l="es">Ingeniero de Sistemas con más de 15 años en software, calidad, infraestructura y ciberseguridad, en Colombia y Canadá. Diseño APIs REST y servicios con Spring Boot, y he llevado plataformas de Java 8 a Java 21 LTS.</p>
+          <p class="hero-desc" data-l="en">Systems Engineer with 15+ years across software, quality, infrastructure and cybersecurity, in Colombia and Canada. I design REST APIs and services with Spring Boot, and I've taken platforms from Java 8 to Java 21 LTS.</p>
+
+          <ul class="focus-list">
+            <li><span data-l="es">Backend con Java y Spring Boot</span><span data-l="en">Backend with Java and Spring Boot</span></li>
+            <li><span data-l="es">Integraciones de IA con MCP</span><span data-l="en">AI integrations with MCP</span></li>
+            <li><span data-l="es">Ciberseguridad y desarrollo seguro</span><span data-l="en">Cybersecurity and secure coding</span></li>
+            <li><span data-l="es">Automatización de pruebas</span><span data-l="en">Test automation</span></li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#proyectos"><span data-l="es">Ver proyectos</span><span data-l="en">See projects</span></a>
+            <a class="btn btn-ghost" href="assets/cv/Diego-Estrada-CV-ES.pdf" download data-l="es">
+              <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" /></svg>Descargar CV</a>
+            <a class="btn btn-ghost" href="assets/cv/Diego-Estrada-CV-EN.pdf" download data-l="en">
+              <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M3 13.5h10" /></svg>Download résumé</a>
+            <a class="btn btn-text" href="https://www.linkedin.com/in/86daeb/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6m0 0H6m5 0v5" /></svg></a>
+          </div>
+        </div>
+
+        <dl class="metrics">
+          <div class="metric">
+            <dt><span data-l="es">años en software y TI</span><span data-l="en">years in software and IT</span></dt>
+            <dd>15+</dd>
+          </div>
+          <div class="metric">
+            <dt><span data-l="es">empresas en Colombia y Canadá</span><span data-l="en">companies in Colombia and Canada</span></dt>
+            <dd>7</dd>
+          </div>
+          <div class="metric">
+            <dt><span data-l="es">errores manuales al automatizar validaciones</span><span data-l="en">manual errors after automating validation</span></dt>
+            <dd>−50%</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────── 01 Perfil ───────────── -->
+    <section class="section" id="perfil" aria-labelledby="perfil-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-index"><span class="idx">01</span><span class="slashes">//</span><span data-l="es">perfil</span><span data-l="en">profile</span></p>
+          <h2 id="perfil-title"><span data-l="es">Quién soy</span><span data-l="en">Who I am</span></h2>
+        </header>
+
+        <div class="profile-grid">
+          <div class="profile-text">
+            <p data-l="es">Soy Ingeniero de Sistemas y llevo más de quince años construyendo y sosteniendo software: desarrollo backend, aseguramiento de calidad, infraestructura y seguridad informática. Viví y trabajé siete años en Canadá con equipos internacionales.</p>
+            <p data-l="en">I'm a Systems Engineer who has spent more than fifteen years building and running software: backend development, quality assurance, infrastructure and information security. I lived and worked in Canada for seven years with international teams.</p>
+            <p data-l="es">Diseño y mantengo APIs REST y servicios con Java y Spring Boot, participo en todo el ciclo de vida del software y llevo esa base de calidad y seguridad a cada decisión de arquitectura. Hoy integro capacidades de IA en sistemas empresariales con Model Context Protocol.</p>
+            <p data-l="en">I design and maintain REST APIs and services with Java and Spring Boot, take part in the whole software lifecycle, and bring that quality and security background into every architecture decision. Today I integrate AI capabilities into business systems with Model Context Protocol.</p>
+          </div>
+
+          <dl class="spec">
+            <div><dt><span data-l="es">Nombre</span><span data-l="en">Name</span></dt><dd>Diego Alejandro Estrada Beltran</dd></div>
+            <div><dt><span data-l="es">Cargo</span><span data-l="en">Role</span></dt><dd>Backend Software Engineer</dd></div>
+            <div><dt><span data-l="es">Nivel</span><span data-l="en">Level</span></dt><dd><span data-l="es">Senior, más de 15 años</span><span data-l="en">Senior, 15+ years</span></dd></div>
+            <div><dt><span data-l="es">Estado</span><span data-l="en">Status</span></dt><dd><span class="status-dot" aria-hidden="true"></span><span data-l="es">Disponible para nuevos proyectos</span><span data-l="en">Open to new projects</span></dd></div>
+            <div><dt><span data-l="es">Ubicación</span><span data-l="en">Location</span></dt><dd><span data-l="es">Medellín, Colombia. Remoto o híbrido</span><span data-l="en">Medellín, Colombia. Remote or hybrid</span></dd></div>
+            <div><dt>Stack</dt><dd>Java, Spring Boot, MySQL, PostgreSQL, Docker, MCP</dd></div>
+            <div><dt><span data-l="es">Métodos</span><span data-l="en">Methods</span></dt><dd>SDLC, Agile / Scrum, Code Review, Clean Architecture</dd></div>
+            <div><dt><span data-l="es">Sectores</span><span data-l="en">Sectors</span></dt><dd><span data-l="es">Tecnología, salud, calidad de software, investigación de mercados, comercio</span><span data-l="en">Technology, healthcare, software testing, market research, retail</span></dd></div>
+          </dl>
+        </div>
+
+        <div class="companies">
+          <p class="companies-label"><span data-l="es">Empresas donde he trabajado</span><span data-l="en">Companies I've worked with</span></p>
+          <ul class="companies-list">
+            <li>Rugged Books</li>
+            <li>Antojitos Inc.</li>
+            <li>Choucair Testing</li>
+            <li>Acies</li>
+            <li>Agfa HealthCare</li>
+            <li>Hospital Fontibón</li>
+            <li>Centro Nacional de Consultoría</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── 02 Proyectos ───────────── -->
+    <section class="section section-projects" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="wrap">
+        <header class="section-head section-head-row reveal">
+          <div>
+            <p class="section-index"><span class="idx">02</span><span class="slashes">//</span><span data-l="es">proyectos</span><span data-l="en">projects</span></p>
+            <h2 id="proyectos-title"><span data-l="es">Lo que he construido</span><span data-l="en">What I've built</span></h2>
+          </div>
+          <div class="carousel-controls">
+            <span class="carousel-count" aria-live="polite"><span id="carousel-current">01</span> / <span id="carousel-total">08</span></span>
+            <button type="button" class="icon-btn" id="carousel-prev" aria-label="Proyecto anterior" data-aria-es="Proyecto anterior" data-aria-en="Previous project">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" /></svg>
+            </button>
+            <button type="button" class="icon-btn" id="carousel-next" aria-label="Proyecto siguiente" data-aria-es="Proyecto siguiente" data-aria-en="Next project">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" /></svg>
+            </button>
+          </div>
+        </header>
+      </div>
+
+      <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Proyectos destacados" data-aria-es="Proyectos destacados" data-aria-en="Featured projects">
+        <div class="carousel-track" id="projects-track" tabindex="0"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="carousel-dots" id="carousel-dots" role="group" aria-label="Elegir proyecto" data-aria-es="Elegir proyecto" data-aria-en="Choose a project"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── 03 Experiencia ───────────── -->
+    <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-index"><span class="idx">03</span><span class="slashes">//</span><span data-l="es">experiencia</span><span data-l="en">experience</span></p>
+          <h2 id="experiencia-title"><span data-l="es">Dónde lo he aplicado</span><span data-l="en">Where I've applied it</span></h2>
+        </header>
+        <ol class="timeline" id="experience-list"></ol>
+      </div>
+    </section>
+
+    <!-- ───────────── 04 Habilidades ───────────── -->
+    <section class="section" id="habilidades" aria-labelledby="habilidades-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-index"><span class="idx">04</span><span class="slashes">//</span><span data-l="es">habilidades</span><span data-l="en">skills</span></p>
+          <h2 id="habilidades-title"><span data-l="es">Con qué trabajo</span><span data-l="en">What I work with</span></h2>
+        </header>
+        <ul class="core-skills" id="core-skills"></ul>
+        <div class="skill-groups" id="skill-groups"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── 05 Credenciales ───────────── -->
+    <section class="section" id="credenciales" aria-labelledby="credenciales-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="section-index"><span class="idx">05</span><span class="slashes">//</span><span data-l="es">credenciales</span><span data-l="en">credentials</span></p>
+          <h2 id="credenciales-title"><span data-l="es">Formación y certificaciones</span><span data-l="en">Education and certifications</span></h2>
+        </header>
+        <ol class="credentials" id="credentials-list"></ol>
+        <div class="languages">
+          <p class="languages-label"><span data-l="es">Idiomas</span><span data-l="en">Languages</span></p>
+          <ul id="languages-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── 06 Contacto ───────────── -->
+    <section class="section section-contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <p class="section-index reveal"><span class="idx">06</span><span class="slashes">//</span><span data-l="es">contacto</span><span data-l="en">contact</span></p>
+          <h2 class="contact-title" id="contacto-title"><span data-l="es">Hablemos de tu próximo proyecto.</span><span data-l="en">Let's talk about your next project.</span></h2>
+          <p class="contact-lead" data-l="es">Si necesitas un backend en Java y Spring Boot, llevar tu plataforma a versiones LTS, conectar tus sistemas con IA o reforzar la seguridad de tus APIs, escríbeme.</p>
+          <p class="contact-lead" data-l="en">If you need a Java and Spring Boot backend, a move to LTS versions, AI connected to your systems or stronger API security, write to me.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:86diegoestrada@gmail.com"><span data-l="es">Escribir un correo</span><span data-l="en">Send an email</span></a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/86daeb/" target="_blank" rel="noopener">LinkedIn<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6m0 0H6m5 0v5" /></svg></a>
+            <a class="btn btn-ghost" href="https://github.com/diegoaestrad" target="_blank" rel="noopener">GitHub<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6m0 0H6m5 0v5" /></svg></a>
+          </div>
+        </div>
+
+        <figure class="code-card" aria-label="Datos de contacto" data-aria-es="Datos de contacto" data-aria-en="Contact details">
+          <div class="code-tabs" aria-hidden="true">
+            <span class="code-tab">ContactInfoDTO.java</span>
+          </div>
+<pre class="code"><code><span class="ln" aria-hidden="true">1</span><span class="kw">var</span> contact = <span class="kw">new</span> ContactInfoDTO(
+<span class="ln" aria-hidden="true">2</span>    <span class="hint"><span data-l="es">nombre</span><span data-l="en">name</span>:</span> <span class="str">"Diego Alejandro Estrada Beltran"</span>,
+<span class="ln" aria-hidden="true">3</span>    <span class="hint"><span data-l="es">rol</span><span data-l="en">role</span>:</span> <span class="str">"Backend Software Engineer"</span>,
+<span class="ln" aria-hidden="true">4</span>    <span class="hint"><span data-l="es">ciudad</span><span data-l="en">city</span>:</span> <span class="str">"Medellín, Colombia"</span>,
+<span class="ln" aria-hidden="true">5</span>    <span class="hint">email:</span> <a class="str" href="mailto:86diegoestrada@gmail.com">"86diegoestrada@gmail.com"</a>,
+<span class="ln" aria-hidden="true">6</span>    <span class="hint">linkedin:</span> <a class="str" href="https://www.linkedin.com/in/86daeb/" target="_blank" rel="noopener">"linkedin.com/in/86daeb"</a>,
+<span class="ln" aria-hidden="true">7</span>    <span class="hint">github:</span> <a class="str" href="https://github.com/diegoaestrad" target="_blank" rel="noopener">"github.com/diegoaestrad"</a>,
+<span class="ln" aria-hidden="true">8</span>    <span class="hint"><span data-l="es">disponible</span><span data-l="en">available</span>:</span> <span class="kw">true</span>
+<span class="ln" aria-hidden="true">9</span>);</code></pre>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- ───────────── Footer ───────────── -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-sign" data-l="es">Software seguro, escalable y listo para IA.</p>
+      <p class="footer-sign" data-l="en">Secure, scalable, AI-ready software.</p>
+      <div class="footer-meta">
+        <p>© <span id="year">2026</span> Diego Alejandro Estrada Beltran</p>
+        <p>Medellín, Colombia</p>
+        <ul class="footer-links">
+          <li><a href="mailto:86diegoestrada@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/86daeb/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/diegoaestrad" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#top"><span data-l="es">Volver arriba</span><span data-l="en">Back to top</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>.reveal{opacity:1!important;transform:none!important}</style>
+  </noscript>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
